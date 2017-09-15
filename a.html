@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+        .boss{
+        	width: 400px;
+        	height: 400px;
+        	position:relative;
+        	margin:100px auto;
+        	transform-style: preserve-3d;
+        	transform: rotateX(20deg) rotateY(20deg); 
+        	animation: rotate 3s linear infinite;
+        }
+        @keyframes rotate{
+        	0%{
+			transform: rotateX(20deg) rotateY(20deg); 
+        	}
+        	100%{
+        	transform: rotateX(360deg) rotateY(360deg); 	
+        	}
+        }
+        .boss div{
+        	position:absolute;
+        	width: 100%;
+        	height: 100%;
+        	font-size:50px;
+        	text-align:center;
+        	line-height:400px;
+        }
+         .boss div:first-child{
+         	transform: translateZ(200px);
+         }
+          .boss div:nth-child(2){
+         	transform: translateZ(-200px);
+         }
+          .boss div:nth-child(3){
+         	transform: translateX(-200px) rotateY(-90deg);
+         }
+          .boss div:nth-child(4){
+         	transform: translateX(200px) rotateY(90deg);
+         }
+          .boss div:nth-child(5){
+         	transform: translateY(-200px) rotateX(-90deg);
+         }
+          .boss div:last-child{
+         	transform: translateY(200px) rotateX(90deg);
+         }
+        </style>
+    </head>
+    <body>
+    <div class="boss">
+    	<div>前</div>
+    	<div>后</div>
+    	<div>左</div>
+    	<div>右</div>
+    	<div>上</div>
+    	<div>下</div>
+    </div>
+    </body>
+    <script>
+      // var divs=document.querySelectorAll('.boss div')
+      //   var colors=['pink',"deeppink","yellow","greenyellow","blue","red"]
+      //  for (var i = 0; i < divs.length; i++) {
+      //  	var str='<ul></ul>'
+      //  	for(var j=0;j<divs.length,j++){
+      //  		str+='<li style=''></li>'
+      //  	}
+      //  	divs[i].innerHTML=str
+      //  	divs[i].style.background=colors[i];
+      //  };
+
+        //divs.forEach(function () {
+        		//console.log(11)
+        	//item.style.background=colors[i];
+       // }
+    </script>
+</html>
