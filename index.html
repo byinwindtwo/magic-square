@@ -24,9 +24,11 @@
 			@keyframes updown{
 				0%{
 					transform:rotateX(20deg) rotateY(20deg);
+					-webkit-transform:rotateX(20deg) rotateY(20deg);
 				}
 				100%{
 					transform:rotateX(20deg) rotateY(380deg);
+					-webkit-transform:rotateX(20deg) rotateY(380deg);
 				}
 			}
 			.box>div{
@@ -85,8 +87,10 @@
 			<div class="behind"></div>
 		</div>
 		<audio src='img/img/1.mp3' autoplay>
-  
-  对不起,您的破浏览器不支持音频播放
+ 		  <source src="img/img/1.mp3" />
+ 		  <source src="img/img/1.wav" />
+		  <source src="img/img/1.wma" />
+  		对不起,您的破浏览器不支持音频播放
 </audio>
 
 		<script src="jquery.js"></script>
